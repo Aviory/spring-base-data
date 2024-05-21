@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{base}" lang="en">
-<title layout:fragment="title">Index</title>
+<head>
 
-<div layout:fragment="content">
-    <div id="number"></div>
-    <button onclick="add()">Add +1!</button>
-    <button onclick="read()">Read!</button>
+    <title layout:fragment="title">Index</title>
+    <script src="js/index.js"></script>
+    <link href="css/my.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="main" layout:fragment="content">
+        <div id="number"></div>
+        <button onclick="add()" class="btn">Add +1!</button>
+        <button onclick="read()" class="btn">Read!</button>
+        <button onclick="send()" class="btn">send!</button>
+        <input type="text">
+        <a href="/setting">setting</a>
+    </div>
 
-    <script src="/js/index.js" defer></script>
-</div>
-
+<!--    <script src="/js/index.js" defer></script>-->
+</body>
 </html>
