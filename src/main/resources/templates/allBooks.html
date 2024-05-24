@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>setting</title>
-    <script src="js/index.js"></script>
 </head>
 <body>
 <h1>setting</h1>
 
-<form action="/setting" method="POST">
+<form method="POST">
     <input type="text" name="txt">
     <input type="text" name="age">
     <button type="submit">ok</button>
 </form>
-<p>author</p>
-<p th:text="${author}">Default Message</p>
-<p>name</p>
-<p th:text="${name}">Default Message</p>
+
+<div th:each="book : ${books}">
+    <p>author</p>
+    <p th:text="${book.author}">Default Message</p>
+    <p>name</p>
+    <p th:text="${book.name}">Default Message</p>
+</div>
 
 <a href="/">close</a>
 </body>
